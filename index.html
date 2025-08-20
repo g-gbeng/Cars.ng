@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cars.ng</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .car-card { margin-bottom: 20px; }
+    .cart-badge {
+      font-size: 0.8rem;
+      padding: 0.35em 0.6em;
+    }
+    body {
+  background-color: white;
+  color: white; 
+}
+
+  </style>
+</head>
+<body class="container py-4">
+
+  <h1 class="mb-4">Cars.ng</h1>
+
+  <!-- Navigation Tabs with Cart -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <ul class="nav nav-tabs" id="carTabs" role="tablist">
+      <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#toyota">Toyota</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#lexus">Lexus</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#hyundai">Hyundai</button></li>
+      
+    </ul>
+
+    <!-- Cart Button with Badge -->
+    <button class="btn btn-outline-primary position-relative" type="button" data-bs-toggle="modal" data-bs-target="#cartModal">
+      🛒 Cart
+      <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge">0</span>
+    </button>
+  </div>
+
+  <!-- Tab Content -->
+  <div class="tab-content">
+
+    <!-- Toyota -->
+    <div class="tab-pane fade show active" id="toyota">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card car-card">
+            <img src="images/COROLLA.webp" class="card-img-top" alt="Toyota Corolla">
+            <div class="card-body">
+              <h5 class="card-title">Toyota Corolla</h5>
+              <p class="card-text">$20,000</p>
+              <button class="btn btn-primary add-to-cart" data-name="Toyota Corolla" data-price="20000">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card car-card">
+            <img src="images/camry.jpg" class="card-img-top" alt="Toyota Camry">
+            <div class="card-body">
+              <h5 class="card-title">Toyota Camry</h5>
+              <p class="card-text">$25,000</p>
+              <button class="btn btn-primary add-to-cart" data-name="Toyota Camry" data-price="25000">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card car-card">
+              <img src="images/PRADO.jpg" class="card-img-top" alt="Toyota Prado">
+              <div class="card-body">
+                <h5 class="card-title">Toyota Prado</h5>
+                <p class="card-text">$150,000</p>
+                <button class="btn btn-primary add-to-cart" data-name="Toyota Prado" data-price="150000">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card car-card">
+              <img src="images/HIGHLANDER.jpg" class="card-img-top" alt="Toyota Highlander">
+              <div class="card-body">
+                <h5 class="card-title">Toyota Highlander</h5>
+                <p class="card-text">$120,000</p>
+                <button class="btn btn-primary add-to-cart" data-name="Toyota Highlander" data-price="120000">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card car-card">
+              <img src="images/fortuner.jpg" class="card-img-top" alt="Toyota Fortuner">
+              <div class="card-body">
+                <h5 class="card-title">Toyota Fortuner</h5>
+                <p class="card-text">$150,000</p>
+                <button class="btn btn-primary add-to-cart" data-name="Toyota Fortuner" data-price="150000">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card car-card">
+              <img src="images/VENZA.png" class="card-img-top" alt="Toyota Venza">
+              <div class="card-body">
+                <h5 class="card-title">Toyota Venza</h5>
+                <p class="card-text">$70,000</p>
+                <button class="btn btn-primary add-to-cart" data-name="Toyota Venza" data-price="70000">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!-- Lexus -->
+    <div class="tab-pane fade" id="lexus">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card car-card">
+            <img src="images/RX350.jpg" class="card-img-top" alt="Lexus RX350">
+            <div class="card-body">
+              <h5 class="card-title">Lexus RX 350</h5>
+              <p class="card-text">$65,000</p>
+              <button class="btn btn-primary add-to-cart" data-name="Lexus RX 350" data-price="65000">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+          <div class="col-md-6">
+            <div class="card car-card">
+              <img src="images/tx500.jpg" class="card-img-top" alt="Lexus TX500">
+              <div class="card-body">
+                <h5 class="card-title">Lexus TX 500</h5>
+                <p class="card-text">$85,000</p>
+                <button class="btn btn-primary add-to-cart" data-name="Lexus TX 460" data-price="85000">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card car-card">
+              <img src="images/LX570.avif" class="card-img-top" alt="Lexus LX570">
+              <div class="card-body">
+                <h5 class="card-title">Lexus LX 570</h5>
+                <p class="card-text">$140,000</p>
+                <button class="btn btn-primary add-to-cart" data-name="Lexus LX 570" data-price="140000">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card car-card">
+              <img src="images/is350.webp" class="card-img-top" alt="Lexus IS350">
+              <div class="card-body">
+                <h5 class="card-title">Lexus IS 350</h5>
+                <p class="card-text">$43,000</p>
+                <button class="btn btn-primary add-to-cart" data-name="Lexus IS 350" data-price="43000">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Hyundai -->
+    <div class="tab-pane fade" id="hyundai">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card car-card">
+            <img src="images/elantra.jpg" class="card-img-top" alt="Hyundai Elantra">
+            <div class="card-body">
+              <h5 class="card-title">Hyundai Elantra</h5>
+              <p class="card-text">$20,000</p>
+              <button class="btn btn-primary add-to-cart" data-name="Hyundai Elantra" data-price="20000">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card car-card">
+              <img src="images/sonata.jpg" class="card-img-top" alt="Hyundai Sonata">
+              <div class="card-body">
+                <h5 class="card-title">Hyundai Sonata</h5>
+                <p class="card-text">$25,000</p>
+                <button class="btn btn-primary add-to-cart" data-name="Hyundai Sonata" data-price="25000">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card car-card">
+              <img src="images/grandeur.jpg" class="card-img-top" alt="Hyundai Azera">
+              <div class="card-body">
+                <h5 class="card-title">Hyundai Azera</h5>
+                <p class="card-text">$55,000</p>
+                <button class="btn btn-primary add-to-cart" data-name="Hyundai Azera" data-price="35000">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card car-card">
+              <img src="images/accent.avif" class="card-img-top" alt="Hyundai Accent">
+              <div class="card-body">
+                <h5 class="card-title">Hyundai Accent</h5>
+                <p class="card-text">$17,000</p>
+                <button class="btn btn-primary add-to-cart" data-name="Hyundai Accent" data-price="17000">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Your Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <ul id="cart-items" class="list-group mb-3"></ul>
+          <h5 class="mt-3">Total: $<span id="cart-total">0</span></h5>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button class="btn btn-success">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function renderCart() {
+      const cartItemsContainer = document.getElementById('cart-items');
+      const cartTotal = document.getElementById('cart-total');
+      const cartCount = document.getElementById('cart-count');
+
+      cartItemsContainer.innerHTML = '';
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        total += item.price;
+
+        const li = document.createElement('li');
+        li.className = "list-group-item d-flex justify-content-between align-items-center";
+        li.innerHTML = `
+          ${item.name} - $${item.price}
+          <button class="btn btn-danger btn-sm remove-item" data-index="${index}">Remove</button>
+        `;
+        cartItemsContainer.appendChild(li);
+      });
+
+      cartTotal.textContent = total;
+      cartCount.textContent = cart.length; 
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    document.addEventListener('click', e => {
+      if (e.target.classList.contains('add-to-cart')) {
+        const name = e.target.getAttribute('data-name');
+        const price = parseInt(e.target.getAttribute('data-price'));
+        cart.push({ name, price });
+        renderCart();
+      }
+
+      if (e.target.classList.contains('remove-item')) {
+        const index = e.target.getAttribute('data-index');
+        cart.splice(index, 1);
+        renderCart();
+      }
+    });
+
+    renderCart();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
